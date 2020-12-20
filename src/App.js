@@ -8,14 +8,27 @@ function App() {
  const [list, setList]   = useState([]);
  const handleSubmit = (e) =>{
    e.preventDefault();
-   console.log("hello");
+   try{
+     const newColor = new Values(color).all(10);
+     console.log(newColor);
+
+  }catch(error){
+    setError(true);
+    console.log(error);
+  }
  }
   return (
    <>
     <section className="container">
       <h3>Color generator</h3>
       <form onSubmit={handleSubmit}>
-        <input type="text" value={color} onChange={(e) => setColor(e.target.value)} />
+        <input 
+        type="text" 
+        value={color} 
+        onChange={(e) => setColor(e.target.value)}
+        placeholder="#f10125"
+        className={`${error}?error: null`} 
+        />
         <button className="btn-generate" type="submit">generate</button>
       </form>
     </section>
