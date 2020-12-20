@@ -1,9 +1,13 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react';
 
-export default function SingleColor() {
+const SingleColor = ({rgb,weight,index}) => {
+    const [alert, setAlert] = useState(false);
+    const bcg = rgb.join(',');
+    console.log(bcg);
     return (
-        <div>
-            
-        </div>
+        <article className={`color`} style={{backgroundColor:`rgb(${bcg})`}}>
+          {weight}
+        </article>
     )
 }
+export default SingleColor;

@@ -9,8 +9,8 @@ function App() {
  const handleSubmit = (e) =>{
    e.preventDefault();
    try{
-     const newColor = new Values(color).all(10);
-     console.log(newColor);
+     const colors = new Values(color).all(10);
+    setList(colors);
 
   }catch(error){
     setError(true);
@@ -33,7 +33,11 @@ function App() {
       </form>
     </section>
     <section className="colors">
-      <h3>list goes here</h3>
+     {list.map((color,index) =>{
+       return (
+         <SingleColor key={index} {...color} index={index}/>
+       );
+     })}
     </section>
    </>
   );
