@@ -37,12 +37,14 @@ body {
 .colors{
   min-height: calc(100vh - 100px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(96px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(223.33px, 1fr));
+  text-align: center;
+  align-items: center;
 }
-article{
-  width: 200px;
-  height: 200px;
+.color{
+ padding:1rem 2rem;
+ min-height: 200px;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
