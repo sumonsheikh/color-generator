@@ -5,6 +5,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background:#ebebeb;
+}
+.container{
+  text-align: center;
+  display:flex;
+  align-items: center;
+  padding-left: 2rem;
+  height: 100px;
+}
+.container h3{
+  margin-right: 2rem;
+  color:#333333;
+}
+.container input{
+  border:transparent;
+  background:#fff;
+  padding:0.5rem 2rem;
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+.btn-generate{
+  background: #2080fd;
+  color:#fff;
+  padding:0.5rem 2rem;
+  text-transform: uppercase;
+  border: transparent;
+  border-radius: 5px;
+  cursor: pointer;
 }
 .colors{
   min-height: calc(100vh - 100px);
