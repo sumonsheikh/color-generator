@@ -6,13 +6,9 @@ const SingleColor = ({rgb, weight, index, hexColor}) => {
     const bcg = rgb.join(',');
     console.log(bcg);
     return (
-        <article className={`color`} style={{backgroundColor:`rgb(${bcg})`}}>
-            <p className="percent-value">
-            {weight}%
-            </p>
-            <p className="hex-value">
-                #{hexColor}
-            </p>
+        <article className={`color ${index >= 10 && 'light-color'}`} style={{backgroundColor:`rgb(${bcg})`}}>
+            <p className="percent-value">{weight}%</p>
+            <p className="hex-value">#{hexColor}</p>
         </article>
     )
 }

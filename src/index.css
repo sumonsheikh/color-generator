@@ -46,6 +46,9 @@ body {
  padding:1rem 2rem;
  min-height: 200px;
 }
+.light-color{
+  color:#fff;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
